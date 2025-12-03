@@ -1,0 +1,16 @@
+.main-container{
+    margin: 6.4% auto;
+  padding: 30px;
+     background-color:#00050d ;
+}
+.heading{
+    font-weight: 700;
+    line-height:56px;
+}
+.subheading{
+    font-size: 20px;
+    line-height: 56px;
+}
+a{
+    text-decoration: none;
+}

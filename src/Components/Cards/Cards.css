@@ -1,0 +1,23 @@
+.container{
+    background-color: black;
+}
+span{
+    color:white
+}
+.cards-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  padding: 10px 0;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none; 
+}
+
+.cards-row::-webkit-scrollbar {
+  display: none;
+}
