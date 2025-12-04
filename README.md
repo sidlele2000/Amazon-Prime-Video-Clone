@@ -1,4 +1,4 @@
-# E-Coomerce Website
+# Amazon Prime Video Clone
 Project Name:- Amazon Prime Video Clone
 Technologies:- React, Material UI
 
