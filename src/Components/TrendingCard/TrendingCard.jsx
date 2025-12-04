@@ -3,12 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Cards/Cards.css";
+import "./TrendingCard.css";
 
 function TrendingCard({ items, onCardClick }) {
   const settings = {  //slick slider settings
     dots: false,
     infinite: false,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 3,
     responsive: [
       { breakpoint: 1200, settings: { slidesToShow: 5 } },

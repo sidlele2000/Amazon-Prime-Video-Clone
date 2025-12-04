@@ -7,14 +7,12 @@ span{
 .cards-row {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-
+  gap: 5px;
   overflow-x: auto;
   white-space: nowrap;
-
   padding: 10px 0;
+  margin:10px;
   scroll-behavior: smooth;
-
   scrollbar-width: none; 
 }
 

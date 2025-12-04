@@ -8,7 +8,7 @@ function LatestCard({ items, onCardClick }) {
   const settings = { //slick slider settings
     dots: false,
     infinite: false,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 3,
     responsive: [
       { breakpoint: 1200, settings: { slidesToShow: 5 } },
