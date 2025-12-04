@@ -1,16 +1,49 @@
-# React + Vite
+# E-Coomerce Website
+Project Name:- Amazon Prime Video Clone
+Technologies:- React, Material UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+About:This is a Amazon Prime Video Website made using React. website has main page, login page and movies page and series page. also website has components like header,footer,card,loader and primecard. fetching the movie and series data from the TMDB API
 
-Currently, two official plugins are available:
+# Tech Stack
+React.js – Frontend UI library
+Material UI (MUI) – UI components & design system
+Axios – API calls
+Movie TMDB API
+JavaScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features:
+1) Movie Details
+Fetch Movies from an TMDB API using Axios
+Implemented the carosel and displayed movies in this
+Movie page with Top Movies, Latest Movies, Trending Movies APIS and Cards
 
-## React Compiler
+2) Series Details
+Fetch Series from an TMDB API using Axios
+Implemented the carosel and displayed Series in this
+Series page with Top Series, Latest Series, Trending Series APIS and Cards
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3) Login
+Email and Password Validation using authcontext at the time of login
+displayed the login details in the header
 
-## Expanding the ESLint configuration
+4) Lazy Laoding for page and cards
+Added lazy laoding while calling apis for movie and series page
+apis will load according to the movement of the scroll
+Checkout and order interactions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5) Reusable Components
+Header
+Footer
+Carousel
+Loader
+Card
+
+# Dependencies
+1) for Axios
+npm install axios
+
+2) for material ui
+npm install @mui/material @emotion/react @emotion/styled
+
+# Screenshots
+
