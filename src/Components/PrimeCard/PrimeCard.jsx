@@ -3,7 +3,7 @@ import "./PrimeCard.css";
 
 function PrimeCard({ item, onClick }) {
   const [hover, setHover] = useState(false);
-  const imageUrl = "https://image.tmdb.org/t/p/w500" + item.poster_path;
+  const imageUrl = "https://image.tmdb.org/t/p/original" + item.poster_path;
   const title = item.title || item.name;
   const year =
     item.release_date?.substring(0, 4) ||

@@ -5,7 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const imageurl = "https://image.tmdb.org/t/p/original";
 function MovieModal({ open, item, close }) {
-    const imageSrc = item.poster_path ? imageurl + item.poster_path : "/placeholder.jpg";
+    const imageSrc = item.poster_path;
     const title = item.title || item.name;
     const year = item.release_date?.slice(0, 4) || item.first_air_date?.slice(0, 4) || "N/A";
     const rating = item.vote_average;
