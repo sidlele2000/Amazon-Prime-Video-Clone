@@ -11,18 +11,26 @@ function Login() {
     const { login } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-   const validateEmail=(email)=>{
-    const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-   }
+    const validateEmail = (email) => {
+        const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailregex.test(String(email).toLowerCase());
+    }
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (email && password) {
-            login(email);
+        if (!email || !password) {
+            alert("please enter both email and password");
+            return;
+        }
+        if (!validateEmail(email)) {
+            alert("please enter valid email");
+            return;
+        }
+        const loginSuccess = login(email, password);
+
+        if (loginSuccess) {
             navigate("/movie");
         } else {
-            alert("please enter email and password");
+            alert("invalid email and password use default credentials");
         }
     };
     return (

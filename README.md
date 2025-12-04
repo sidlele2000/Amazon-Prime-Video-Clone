@@ -1,4 +1,4 @@
-# Amazon Prime Video Clone
+# Amazon Prime Video Cloneclear
 Project Name:- Amazon Prime Video Clone
 Technologies:- React, Material UI
 
