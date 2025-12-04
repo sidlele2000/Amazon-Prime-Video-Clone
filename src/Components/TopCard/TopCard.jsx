@@ -5,9 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../Cards/Cards.css";
 
 function TopCard({ items, onCardClick }) {
-  const settings = { //slick slider settings
-    dots: false,
-    infinite: false,
+  const settings = {  //slick slider settings
     slidesToShow: 6,
     slidesToScroll: 3,
     responsive: [

@@ -8,11 +8,16 @@ import "./Header.css";
 import { Typography, Divider } from "@mui/material";
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 // import { useAuth } from "../UserLogin/UserLogin";
 
 function Header() {
     const navigate = useNavigate();
     // const { user, isLoggedIn, logout } = useAuth();
+    const [activeButton, setActiveButton] = useState('home');
+    const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
     return (
         <Box sx={{ flex: 1 }}>
             <AppBar position="fixed" sx={{ backgroundColor: "#00050d", py: 1 }} className="app-header">
@@ -44,6 +49,10 @@ function Header() {
                                     backgroundColor: 'white',
                                     color: 'black'
                                 },
+                                '&:active':{
+                                    backgroundColor:'white',
+                                    color:'black'
+                                }
                             }}
                         >
                             <Typography sx={{ fontSize: 18, display: "flex", justifyContent: "space-between", maxWidth: 100, fontStyle: "normal", fontWeight: 500 }} onClick={() => {
@@ -57,6 +66,10 @@ function Header() {
                                     backgroundColor: 'white',
                                     color: 'black'
                                 },
+                                '&:active':{
+                                    backgroundColor:'white',
+                                    color:'black'
+                                }
                             }}
                         >
                             <Typography sx={{ fontSize: 18, display: "flex", justifyContent: "space-between", maxWidth: 100, fontStyle: "normal", fontWeight: 500 }} onClick={() => {

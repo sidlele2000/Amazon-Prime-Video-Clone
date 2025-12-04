@@ -5,7 +5,9 @@ function Cards({ items = [] }) {
   return (
     <div className="cards-row horizontal-scroll-container">
       {items.map((item) => (
+        <>
         <PrimeCard key={item.id} item={item} />
+        </>
       ))}
 
     </div>

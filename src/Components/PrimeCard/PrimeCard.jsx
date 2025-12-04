@@ -1,44 +1,49 @@
 import { useState } from "react";
-import './PrimeCard.css'
-import { Typography } from "@mui/material";
+import "./PrimeCard.css";
 
-function PrimeCard({ item,onClick }) {
-  const [isHovered, setIsHovered] = useState(false);
-  const imageurl = "https://image.tmdb.org/t/p/original";
-  const imageSrc = imageurl + item.poster_path;
+function PrimeCard({ item, onClick }) {
+  const [hover, setHover] = useState(false);
+  const imageUrl = "https://image.tmdb.org/t/p/w500" + item.poster_path;
   const title = item.title || item.name;
-  const year = item.release_date?.slice(0, 4) || item.first_air_date?.slice(0, 4) || "N/A";
-  const rating = item.vote_average;
-  const overview = item.overview;
+  const year =
+    item.release_date?.substring(0, 4) ||
+    item.first_air_date?.substring(0, 4) ||
+    "";
+  const rating = item.vote_average?.toFixed(1);
+  const overview = item.overview || "";
 
   return (
     <div
-      className="prime-card-wrapper"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-       onClick={onClick}
+      className="prime_card"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      onClick={onClick}
     >
       <img
-        src={imageSrc}
+        src={imageUrl}
         alt={title}
-        className={`prime-card-display ${isHovered ? "hovered" : ""}`}
+        className={
+          hover ? "prime_card_image prime_card_image_hovered" : "prime_card_image"
+        }
       />
+      {hover && (
+        <div className="prime_hover_container">
+          <div className="prime_title">{title.length > 50
+            ? title.substring(0, 50) + "..." : title}</div>
 
-      {isHovered && (
-        <div className="prime-card-hover">
-          <img src={imageSrc} alt={title} className="prime-card-hover-img" />
-          <div className="prime-card-hover-content">
-            <Typography sx={{fontSize:25,fontWeight:600}}>{title}</Typography>
-            <div className="hover-buttons">
-              <button className="hover-play-btn">Play</button>
-            </div>
-            <Typography>
-              {year} • Rating: {rating}
-              </Typography>
-            <Typography>Watch with Prime membership</Typography>
-            <Typography>
-              {overview.length > 120 ? overview.slice(0, 120) + "..." : overview}
-            </Typography>
+          <div>
+            <button className="prime_play_button">Play</button>
+          </div>
+
+          <div className="prime_rating">
+            {year} • IMDb {rating}
+          </div>
+
+          <div className="prime_membership">Watch with Prime</div>
+          <div className="prime_overview">
+            {overview.length > 120
+              ? overview.substring(0, 120) + "..."
+              : overview}
           </div>
         </div>
       )}
